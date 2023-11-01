@@ -10,8 +10,8 @@ public class Matrix {
     return matrix;
   }
 
-  public void printMatrix(int[][] matrix, int size){
-    int color = size;
+  public void printMatrix(int size){
+    int color = size-1;
     for(int row = 0; row < size; row++){
       for(int coloumn = 0; coloumn < size; coloumn++){
         if(coloumn == color){
@@ -21,10 +21,27 @@ public class Matrix {
         }
       }
       System.out.println();
+      color--;
     }
   }
 
-  public void populateMatrix(int[][] matrix){
+  public void populateMatrix(int[][] matrix, int size){
+    int color = size-1;
+    int number = 1;
+    for(int row = 0; row < size; row++){
+      for(int coloumn = 0; coloumn < size; coloumn++){
+        if(coloumn == color){
+          matrix[row][coloumn] = number;
+          System.out.print(YELLOW + number + RESET + "  ");
+        }else{
+          matrix[row][coloumn] = number;
+          System.out.print(number +"  ");
+        }
+        number++;
+      }
+      System.out.println();
+      color--;
+    }
   }
 
   public void swapMatrix(int[][] matrix){

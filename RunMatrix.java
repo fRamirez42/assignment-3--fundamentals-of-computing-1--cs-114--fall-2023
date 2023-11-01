@@ -2,22 +2,27 @@ import java.util.Scanner;
 
 public class RunMatrix {
   public static void main(String[] args) {
+    Matrix matrixClass = new Matrix();
     Scanner scan = new Scanner(System.in);
     String input;
     int size = 0;
+    int[][] matrix = new int[size][size];
 
-    System.out.print("Please enter a number bigger than 0");
+    System.out.println("Please enter a number bigger than 0");
+    input = scan.nextLine();
 
     try{
-      if(size > 0){
-        size = scan.nextInt();
-      }else{
+      size = Integer.parseInt(input);
+      if(size < 0){
         System.out.println("You entered an number lower than 1, please try again");
       }
     } catch (Exception e){
       System.out.println("You entered something that was not a number, please run again and try again");
     }
 
+    matrixClass.printMatrix(size);
+
+    matrixClass.populateMatrix(matrix, size);
 
 
   }
