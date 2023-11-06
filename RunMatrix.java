@@ -17,9 +17,9 @@ public class RunMatrix {
       System.out.println("You entered something that was not a number, please run again and try again");
     }
 
-    Matrix matrixClass = new Matrix(size);
-    matrixClass.printMatrix();
-    matrixClass.populateMatrix();
+    Matrix matrix = new Matrix(size);
+    matrix.printMatrix();
+    matrix.populateMatrix();
 
 
   }
