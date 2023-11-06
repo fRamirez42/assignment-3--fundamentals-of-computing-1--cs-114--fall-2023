@@ -1,29 +1,16 @@
 public class Matrix {
   final String RESET = "\u001B[0m";
   final String YELLOW = "\u001B[33m";
-   int[][] matrix = new int[0][0];
+   int[][] matrix;
 
 
   public Matrix(int size){
     matrix = new int[size][size];
-  }
-
-  public Integer checkInt(String input) {
-    int size = 0;
-    try{
-      size = Integer.parseInt(input);
-      if(size < 0){
-        System.out.println("You entered an number lower than 1, please try again");
-      }
-    } catch (Exception e){
-      System.out.println("You entered something that was not a number, please run again and try again");
-    }
-
-    return size;
+    System.out.println("The size of the matrix is: " + size + " x " + size);
   }
 
   public void printMatrix(){
-    int[][] matrix = this.Matrix();
+    int[][] matrix = this.matrix;
     int color = matrix.length-1;
 
     for(int row = 0; row < matrix.length; row++){
@@ -40,8 +27,8 @@ public class Matrix {
     System.out.println();
   }
 
-  public void populateMatrix(int size){
-    int[][] matrix = this.Matrix();
+  public void populateMatrix(){
+    int[][] matrix = this.matrix;
     int color = matrix.length-1;
     int number = 1;
 
@@ -61,7 +48,10 @@ public class Matrix {
     }
   }
 
-  public void swapMatrix(int[][] matrix){
+  public void swapMatrix(){
+  }
+
+  private void swap(int x1, int x2, int y1, int y2){
   }
 
  //int value : list

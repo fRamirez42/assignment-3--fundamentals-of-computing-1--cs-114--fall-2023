@@ -6,15 +6,21 @@ public class RunMatrix {
     String input;
     int size = 0;
     int[][] matrix = new int[size][size];
-    Matrix matrixClass = new Matrix(size);
+
 
     System.out.println("Please enter a number bigger than 0");
     input = scan.nextLine();
-    size = matrixClass.checkInt(input);
+    try{
+      size = Integer.parseInt(input);
+      if(size < 0){
+        System.out.println("You entered an number lower than 1, please try again");
+      }
+    } catch (Exception e){
+      System.out.println("You entered something that was not a number, please run again and try again");
+    }
 
+    Matrix matrixClass = new Matrix(size);
     matrixClass.printMatrix();
-    matrixClass.populateMatrix(size);
-
-
+    matrixClass.populateMatrix();
   }
 }
