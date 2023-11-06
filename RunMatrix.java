@@ -5,8 +5,6 @@ public class RunMatrix {
     Scanner scan = new Scanner(System.in);
     String input;
     int size = 0;
-    int[][] matrix = new int[size][size];
-
 
     System.out.println("Please enter a number bigger than 0");
     input = scan.nextLine();
@@ -22,5 +20,7 @@ public class RunMatrix {
     Matrix matrixClass = new Matrix(size);
     matrixClass.printMatrix();
     matrixClass.populateMatrix();
+
+
   }
 }

@@ -35,13 +35,12 @@ public class Matrix {
     for(int row = 0; row < matrix.length; row++){
       for(int coloumn = 0; coloumn < matrix.length; coloumn++){
         if(coloumn == color){
-          matrix[row][coloumn] = number;
+          matrix[row][coloumn] = number++;
           System.out.print(YELLOW + number + RESET + "\t");
         }else{
-          matrix[row][coloumn] = number;
+          matrix[row][coloumn] = number++;
           System.out.print(number +"\t");
         }
-        number++;
       }
       System.out.println();
       color--;
@@ -53,7 +52,4 @@ public class Matrix {
 
   private void swap(int x1, int x2, int y1, int y2){
   }
-
- //int value : list
-
 }
