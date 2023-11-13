@@ -16,8 +16,8 @@ public class Matrix {
     int number = 1;
 
     for(int row = 0; row < matrix.length; row++){
-      for(int coloumn = 0; coloumn < matrix.length; coloumn++){
-        matrix[row][coloumn] = number++;
+      for(int column = 0; column < matrix.length; column++){
+        matrix[row][column] = number++;
       }
       System.out.println();
     }
@@ -27,11 +27,11 @@ public class Matrix {
     int color = matrix.length-1;
 
     for(int row = 0; row < matrix.length; row++){
-      for(int coloumn = 0; coloumn < matrix.length; coloumn++){
-        if(coloumn == color){
-          System.out.print(YELLOW + matrix[row][coloumn] + "\t" + RESET);
+      for(int column = 0; column < matrix.length; column++){
+        if(column == color){
+          System.out.print(YELLOW + matrix[row][column] + "\t" + RESET);
         }else{
-          System.out.print(matrix[row][coloumn] + "\t");
+          System.out.print(matrix[row][column] + "\t");
         }
       }
       System.out.println();
@@ -43,8 +43,8 @@ public class Matrix {
   public void flipMatrix(){
     int end = input;
     for(int row = 0; row < matrix.length - 1; row++){
-      for(int coloumn = 0; coloumn < end-1; coloumn++){
-        swap(row, coloumn, (input-1) - row, (input-1) - coloumn);
+      for(int column = 0; column < end-1; column++){
+        swap(row, column, (input-1) - row, (input-1) - column);
       }
       end--;
     }
