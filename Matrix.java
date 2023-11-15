@@ -39,6 +39,7 @@ public class Matrix {
 
   public void flipMatrix(){
     int diagonal = inputSize;
+
     for(int row = 0; row < matrix.length - 1; row++){
       for(int column = 0; column < diagonal-1; column++){ //Updates to end the loop before the diagonal
         swap(row, column, (inputSize-1) - row, (inputSize-1) - column);
