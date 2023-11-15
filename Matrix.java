@@ -2,13 +2,11 @@ public class Matrix {
   final String RESET = "\u001B[0m";
   final String YELLOW = "\u001B[33m";
   int[][] matrix;
-  int input = 0;
-
-
+  int inputSize = 0;
 
   public Matrix(int size){
     matrix = new int[size][size];
-    input = size;
+    inputSize = size;
     System.out.println("The size of the matrix is: " + size + " x " + size);
   }
 
@@ -40,12 +38,12 @@ public class Matrix {
   }
 
   public void flipMatrix(){
-    int end = input;
+    int endLoop = inputSize;
     for(int row = 0; row < matrix.length - 1; row++){
-      for(int column = 0; column < end-1; column++){
-        swap(row, column, (input-1) - row, (input-1) - column);
+      for(int column = 0; column < endLoop-1; column++){ //Updates to end the loop before the middle
+        swap(row, column, (inputSize-1) - row, (inputSize-1) - column);
       }
-      end--;
+      endLoop--;
     }
   }
 
