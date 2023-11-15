@@ -19,7 +19,6 @@ public class Matrix {
       for(int column = 0; column < matrix.length; column++){
         matrix[row][column] = number++;
       }
-      System.out.println();
     }
   }
 
