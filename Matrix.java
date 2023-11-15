@@ -48,8 +48,8 @@ public class Matrix {
   }
 
   private void swap(int x1, int x2, int y1, int y2){
-    int temp = matrix[x1][x2];
+    int temporary = matrix[x1][x2];
     matrix[x1][x2] = matrix[y1][y2];
-    matrix[y1][y2] = temp;
+    matrix[y1][y2] = temporary;
   }
 }
