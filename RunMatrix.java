@@ -9,6 +9,7 @@ public class RunMatrix {
     System.out.println("Please enter a number bigger than 0");
     input = scan.nextLine();
     System.out.println();
+
     try{
       size = Integer.parseInt(input);
 
@@ -36,9 +37,5 @@ public class RunMatrix {
     } catch (Exception e){
       System.out.println("You entered something that was not a number, please run again and try again");
     }
-
-
-
-
   }
 }

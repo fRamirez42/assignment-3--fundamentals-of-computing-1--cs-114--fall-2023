@@ -21,35 +21,35 @@ public class Matrix {
   }
 
   public void printMatrix(){
-    int printColor = matrix.length-1;
+    int color = matrix.length-1;
 
     for(int row = 0; row < matrix.length; row++){
       for(int column = 0; column < matrix.length; column++){
-        if(column == printColor){
+        if(column == color){
           System.out.print(YELLOW + matrix[row][column] + "\t" + RESET);
         }else{
           System.out.print(matrix[row][column] + "\t");
         }
       }
       System.out.println();
-      printColor--;
+      color--;
     }
     System.out.println();
   }
 
   public void flipMatrix(){
-    int endLoop = inputSize;
+    int middle = inputSize;
     for(int row = 0; row < matrix.length - 1; row++){
-      for(int column = 0; column < endLoop-1; column++){ //Updates to end the loop before the middle
+      for(int column = 0; column < middle-1; column++){ //Updates to end the loop before the middle
         swap(row, column, (inputSize-1) - row, (inputSize-1) - column);
       }
-      endLoop--;
+      middle--;
     }
   }
 
   private void swap(int x1, int x2, int y1, int y2){
-    int temporary = matrix[x1][x2];
+    int hold = matrix[x1][x2];
     matrix[x1][x2] = matrix[y1][y2];
-    matrix[y1][y2] = temporary;
+    matrix[y1][y2] = hold;
   }
 }
