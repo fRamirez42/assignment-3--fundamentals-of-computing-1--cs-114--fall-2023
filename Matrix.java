@@ -21,18 +21,18 @@ public class Matrix {
   }
 
   public void printMatrix(){
-    int color = matrix.length-1;
+    int printColor = matrix.length-1;
 
     for(int row = 0; row < matrix.length; row++){
       for(int column = 0; column < matrix.length; column++){
-        if(column == color){
+        if(column == printColor){
           System.out.print(YELLOW + matrix[row][column] + "\t" + RESET);
         }else{
           System.out.print(matrix[row][column] + "\t");
         }
       }
       System.out.println();
-      color--;
+      printColor--;
     }
     System.out.println();
   }
